@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function Home() {
   // fetch data from the database
   async function fetchData() {
+    "use server"
     const users = await db.select().from(usersTable);
     console.log(users);
   }
